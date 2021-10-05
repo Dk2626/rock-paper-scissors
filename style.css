@@ -122,6 +122,10 @@ body{
     padding: 10px 40px;
     border-radius: 6px;
     cursor: pointer;
+    transition: all 0.3s;
+}
+.refree p:hover{
+    transform: scale(120%);
 }
 .rules{
    position: absolute;
