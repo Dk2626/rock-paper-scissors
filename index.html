@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js"></script>
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logoTitle">
+                <img src="./images/logo.svg" alt="logo">
+            </div>
+            <div class="score">
+                <p>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+        <div class="actionHand">
+            <div class="paper action">
+                    <img src="./images/icon-paper.svg" alt="paper" onclick="pickUserHand('paper')">
+            </div>
+            <div class="scissors action">
+                <img src="./images/icon-scissors.svg" alt="scissors" onclick="pickUserHand('scissors')">
+            </div>
+            <div class="rock action">
+                <img src="./images/icon-rock.svg" alt="rock" onclick="pickUserHand('rock')">
+            </div>
+        </div>
+        <div class="contest">
+            <div class="userHand">
+                <h3>YOU PICKED</h3>
+                <div id="userPickColor" class="paper action">
+                    <img id="userPickImage" src="./images/icon-paper.svg">
+                </div>
+            </div>
+            <div class="refree">
+                <h1>YOU WIN</h1>
+                <p onclick="restartGame()">Play again</p>
+            </div>
+            <div class="systemHand">
+                <h3>THE HOUSE PICKED</h3>
+                <div id="computerPickColor" class="scissors action">
+                    <img id="computerPickImage" src="./images/icon-scissors.svg">
+                </div>
+            </div>
+        </div>
+        <div class="rules">
+            RULES
+        </div>
+    </div>
+</body>
+</html>

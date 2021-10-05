@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.header{
+    width: 700px;
+    height: 150px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+}
+.score{
+    background-color: white;
+    width: 150px;
+    height: 115px;
+    border-radius: 10px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logoTitle{
+    margin-left: 30px;
+}
+.score p{
+    color: hsl(229, 64%, 46%);
+    letter-spacing: 2px;
+}
+.score h1{
+    color: hsl(229, 25%, 31%);
+    font-size: 48px;
+}
+.actionHand{
+    background-image: url("./images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 450px;
+    height: 450px;
+    margin-top: 50px;
+}
+.action{
+    width: 160px;
+    height: 160px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.paper{
+    border: 20px solid hsl(230, 89%, 62%);
+    margin-right: 20px;
+}
+.scissors{ 
+    border: 20px solid hsl(39, 89%, 49%); 
+    margin-left: 20px;
+}
+.rock{
+    border: 20px solid hsl(349, 71%, 52%);
+}
+.action:hover{
+    transform: translate(0px, -8px);
+}
+.contest{
+    display: none;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+.userHand,.systemHand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.userHand h3,
+.systemHand h3{
+    color: white;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+.refree{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.refree h1{
+    color: white;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.refree p{
+    background-color: white;
+    padding: 10px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.rules{
+   position: absolute;
+   bottom: 15px;
+   right: 15px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
