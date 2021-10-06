@@ -131,10 +131,173 @@ body{
    position: absolute;
    bottom: 15px;
    right: 15px;
-    border: 2px solid hsl(217, 16%, 45%);
-    border-radius: 15px;
-    padding: 10px 20px;
+   border: 2px solid hsl(217, 16%, 45%);
+   border-radius: 15px;
+   padding: 10px 20px;
     color: white;
     cursor: pointer;
     letter-spacing: 2px;
+}
+.rulesModalMain{
+    display: none;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+.rulesModal{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+}
+.rulesHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.rulesHead h2{
+    color: hsl(229, 25%, 31%);
+   font-weight: 700;
+}
+.rulesHead img{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+   
+  .header{
+        width: 500px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .logoTitle img{
+      width: 100px;
+  }
+  .score{
+      width: 100px;
+      height: 60px;
+  }
+  .score h1{
+      font-size: 28px;
+  }
+  .actionHand{
+      margin-top: 10px;
+      background-size: 70%;
+      width: 350px;
+      height: 350px;
+  }
+  .action{
+      width: 110px;
+      height: 110px;
+  }
+  .action img{
+      width: 29px;
+      height: 39px;
+  }
+  .rules{
+      position: absolute;
+      bottom: 20px;
+      right: 42%;
+  }
+  .scissors{
+      /* margin-top: 30px; */
+      margin-left: 30px;
+  }
+  .paper{
+      /* margin-top: 30px; */
+      margin-right: 30px;
+  }
+  .rulesHead{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .rulesModal{
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+  }
+  .rulesHead img{
+      position: absolute;
+      bottom: 0;
+      margin: 20px;
+       width: 20px;
+       height: 20px;
+  }
+  .contest{
+      position: relative;
+      margin-top: 10px;
+  }
+
+  .refree{
+      position: absolute;
+      bottom: -100px;
+      right: 35%;
+  }
+  .systemHand{
+      flex-direction: column-reverse;
+  }
+  .userHand{
+      flex-direction: column-reverse;
+  }
+  .userHand h3{
+      font-size: 15px;
+      margin-top: 10px;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    .systemHand h3{
+        font-size: 15px;
+        margin-top: 10px;
+        margin-right: 30px;
+        margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 520px) {
+     .header{
+        width: 300px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .logoTitle img{
+      width: 80px;
+  }
+  .score{
+      width: 80px;
+      height: 50px;
+  }
+  .score h1{
+      font-size: 20px;
+  }
+  .refree h1{
+      font-size: 32px;
+  }
+  .userHand h3,
+  .systemHand h3{
+      margin-right: 0;
+      margin-left: 0;
+      font-size: 14px;
+  }
+  .refree{
+      right: 30%;
+  }
+  .rules{
+      right: 38%;
+  }
 }

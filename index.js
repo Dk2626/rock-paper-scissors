@@ -13,7 +13,6 @@ const colorOptions = {
 let SCORE = 0
 
 const pickUserHand = (hand) => {
-    console.log(hand)
     
     let actionHand = document.querySelector('.actionHand')
     actionHand.style.display = "none"
@@ -22,10 +21,8 @@ const pickUserHand = (hand) => {
     contest.style.display = "flex"
     
     document.getElementById("userPickColor").className = colorOptions[hand]
-    console.log(`colorOptions`, colorOptions[hand])
 
     document.getElementById("userPickImage").src = handOptions[hand]
-    console.log(`handOptions`, handOptions[hand])
 
     let cphand = pickComputerHand()
 
@@ -38,13 +35,10 @@ const pickComputerHand = () => {
     let hands = ["rock", "paper", "scissors"]
     let cphand = hands[Math.floor(Math.random() * 3)]
 
-    console.log(cphand)
 
     document.getElementById("computerPickColor").className = colorOptions[cphand]
-    console.log(`colorOptions`, colorOptions[cphand])
 
     document.getElementById("computerPickImage").src = handOptions[cphand]
-    console.log(`handOptions`, handOptions[cphand])
 
     return cphand
 }
@@ -61,7 +55,7 @@ const referee = (userHand, cpHand) => {
        setScore(SCORE + 1)
     }
     if(userHand == "paper" && cpHand == "paper"){
-       setDecision("TIE!")
+       setDecision("IT'S TIE!")
     }
     if(userHand == "scissors" && cpHand == "paper"){
        setDecision("YOU WIN!")
@@ -74,7 +68,7 @@ const referee = (userHand, cpHand) => {
        }
     }
     if(userHand == "scissors" && cpHand == "scissors"){
-       setDecision("TIE!")
+       setDecision("IT'S TIE!")
     }
     if(userHand == "rock" && cpHand == "scissors"){
        setDecision("YOU WIN!!")
@@ -87,18 +81,16 @@ const referee = (userHand, cpHand) => {
        }
     }
     if(userHand == "rock" && cpHand == "rock"){
-       setDecision("TIE!")
+       setDecision("IT'S TIE!")
     }
 
 }
 
 const setDecision = (decision) => {
-    console.log(decision)
     document.querySelector(".refree h1").innerText = decision
 }
 
 const setScore = (score) => {
-    console.log(score)
     SCORE = score
     document.querySelector(".score h1").innerText = score
 }
@@ -109,4 +101,14 @@ const restartGame = () => {
     
     let contest = document.querySelector('.contest')
     contest.style.display = "none"
+}
+
+const openRulesModal = () => {
+     let rulesModal = document.querySelector('.rulesModalMain')
+    rulesModal.style.display = "flex"
+}
+
+const closeRulesModal = () => {
+     let rulesModal = document.querySelector('.rulesModalMain')
+    rulesModal.style.display = "none"
 }
