@@ -205,10 +205,14 @@ border-radius: 10px;
       width: 29px;
       height: 39px;
   }
-  .rules{
-      position: absolute;
+  /* .rules{
+      position: none;
       bottom: 20px;
       right: 42%;
+  } */
+  .rules{
+      position: relative;
+      bottom: -50px;
   }
   .scissors{
       /* margin-top: 30px; */
@@ -236,18 +240,23 @@ border-radius: 10px;
       position: absolute;
       bottom: 0;
       margin: 20px;
-       width: 20px;
-       height: 20px;
+      width: 20px;
+      height: 20px;
   }
   .contest{
-      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
       margin-top: 10px;
   }
-
-  .refree{
-      position: absolute;
-      bottom: -100px;
-      right: 35%;
+  .contest :nth-child(1){
+      order: 1;
+  }
+  .contest :nth-child(2){
+      order: 3;
+  }
+  .contest :nth-child(3){
+      order: 2;
   }
   .systemHand{
       flex-direction: column-reverse;
@@ -294,10 +303,7 @@ border-radius: 10px;
       margin-left: 0;
       font-size: 14px;
   }
-  .refree{
-      right: 30%;
-  }
-  .rules{
-      right: 38%;
+  .contest{
+      width: 100%;
   }
 }
